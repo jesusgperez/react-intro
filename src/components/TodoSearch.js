@@ -3,9 +3,7 @@ import './TodoSearch.css';
 import { TodoContext } from '../context/TodoContext';
 
 function TodoSearch(){
-    //const [state, setState] = React.useState('')
     const {searchValue:state, setSearchValue:setState} = React.useContext(TodoContext)
-
     const searchValueChange = (event) => {
         setState(event.target.value)
     }

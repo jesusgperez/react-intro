@@ -12,9 +12,7 @@ const defaultTodos = [
 
 
 
-function App(props) {
-
-    
+function App(props) {    
     return (
         <TodoProvider>    
             <AppUI/>
