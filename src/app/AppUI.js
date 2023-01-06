@@ -8,7 +8,7 @@ import { TodoSearch } from "../components/TodoSearch";
 import { Modal } from "../components/Modal"
 import { TodoForm } from "../components/TodoForm"
 import { TodoHeader } from "../components/TodoHeader";
-import { ChangeAlertWithStorageListener } from "../components/ChangeAlert";
+import { ChangeAlert } from "../components/ChangeAlert";
 
 function AppUI() {
     const {error, loading,
@@ -83,7 +83,7 @@ function AppUI() {
                 openModal={openModal}
             />
 
-            <ChangeAlertWithStorageListener synchronize={synchronize}/>
+            <ChangeAlert synchronize={synchronize}/>
         </React.Fragment>
     )
 }

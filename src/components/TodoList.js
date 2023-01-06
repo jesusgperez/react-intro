@@ -10,7 +10,7 @@ function TodoList(props){
             {(!props.loading && !props.totalTodos) && props.onEmptyTodos()}
             {(!!props.totalTodos && !props.searchedTodos.length) && props.onEmptySearch()}
             <ul className="TodoList">
-                {props.searchedTodos.map(renderFunc)}
+                {(!props.loading && !props.error) && props.searchedTodos.map(renderFunc)}
             </ul>
         </section>
     )
