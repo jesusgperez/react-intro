@@ -2,8 +2,7 @@ import React from 'react';
 import './TodoSearch.css';
 import { TodoContext } from '../context/TodoContext';
 
-function TodoSearch(){
-    const {searchValue:state, setSearchValue:setState} = React.useContext(TodoContext)
+function TodoSearch({loading, searchValue:state, setSearchValue:setState}){
     const searchValueChange = (event) => {
         setState(event.target.value)
     }
@@ -22,6 +21,7 @@ function TodoSearch(){
             className='TodoSearch'
             placeholder="Cebolla"
             onChange={searchValueChange}
+            disabled={loading}
         />)
     
 }
